@@ -1,0 +1,23 @@
+close all;
+clear all;
+clc;
+img=imread('Q2.jpg');
+bw=im2bw(img,0.7);
+label=bwlabel(bw);
+stats=regionprops(label,'Solidity','Area');
+density=[stats.Solidity];
+area=[stats.Area];
+high_dense_area=density>0.2;
+max_area=max(area(high_dense_area));
+t_label=find(area==max_area);
+t_new=ismember(label,t_label);
+se=strel('square',5);
+t_new=imdilate(t_new,se);
+figure(2);
+subplot(1,3,1);
+imshow(img,[]);
+title('Box with a crack');
+subplot(1,3,2);
+imshow(t_new,[]);
+title('Crack line Alone');
+hold on

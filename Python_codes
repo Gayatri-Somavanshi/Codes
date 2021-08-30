@@ -5,3 +5,38 @@ tuple=tuple(list)
 print(list)
 print(tuple)
 //
+//Write a Python program to count the number 4 in a given list.
+n=input()
+list=n.split(",")
+print(list.count('4'))
+//
+//Write a Python program to get the n (non-negative integer) copies of the first 2 characters of a given string.
+Return the n copies of the whole string if the length is less than 2
+str=input()
+n=int(input())
+if len(str)<=2:
+    c=str*n
+    print(c)
+else:
+    print((str[0:2])*n)
+//
+//Check if passed letter is consonant or vowel
+c=input()
+v='aeiou'
+if c in v:
+    print('yes a vowel')
+else:
+    print('no a consonant')
+//
+// Write a Python program to check whether a specified value is contained in a group of values.
+a=input()
+list1=a.split(",")
+e=input()
+if e in a:
+    print('True')
+else:
+    print('False')
+//
+//
+
+

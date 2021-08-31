@@ -37,6 +37,21 @@ if e in a:
 else:
     print('False')
 //
+//**//Write a Python program to create a histogram from a given list of integers.
+a=list(input())
+for x in range(len(a)):
+    print("*"*int(a[x]))
+//**//
+// Write a Python program to concatenate all elements in a list into a string and return it.
+a=input()
+list=a.split(",")
+str=''.join(str(e) for e in list)
+print(str)
+/or/
+a=input()
+list=a.split(",")
+print(''.join(list))
+//
 //
 
 
